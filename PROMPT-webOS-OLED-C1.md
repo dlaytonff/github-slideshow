@@ -18,6 +18,22 @@ does not exist on webOS.
 5. Turn **Quick Start+** on and leave the TV on for the whole session.
 6. Write down your Software Version and webOS version from About This TV. You will be asked for them.
 
+### On Windows
+
+- Install **Git for Windows** (https://git-scm.com/download/win). Its Git Bash ships `sh`, `ssh` and `perl`,
+  which `tools/diagnose.sh` needs. Run Claude Code from Git Bash, or from WSL (Ubuntu) if you already use it.
+  Plain PowerShell has `ssh` (Windows 10/11 OpenSSH) but not `sh` or `perl`.
+- Make the key in Git Bash: `ssh-keygen -t ed25519`, then copy the contents of `~/.ssh/id_ed25519.pub` to the
+  TV as the Homebrew Channel's SSH docs describe.
+- Allow `ssh` through Windows Firewall if asked. The connection goes out to the TV on port 22.
+
+### Firmware 03.53.45 (webOS 6.5.3)
+
+- In `compat.json` this firmware is listed as reported working (OLED48C16LA, OLED55G19LA, 65NANO753PR,
+  OLED65B16LA, 55UP7550PVG), so the setup runs without **Set up anyway**.
+- Root is the open question on this firmware. Check https://www.webosbrew.org/rooting/ for 03.53.45 first.
+  Until you have root, do not accept a firmware update: a newer version is less likely to be rootable.
+
 Known C1 reports in the project (`docs/tested-tvs.md`, `compat.json`): OLED55C16LA on firmware `03.34.80`
 (SDK 6.3.2) and OLED48C16LA on `03.53.45` (SDK 6.5.3) both **work** with the native-Home stand-in.
 On webOS 6, LG's Home is a native program, so the launcher takes over through a stand-in, not a mount.
