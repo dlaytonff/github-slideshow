@@ -40,8 +40,8 @@ On webOS 6, LG's Home is a native program, so the launcher takes over through a 
 
 ---
 
-I have a rooted LG OLED C1. Model: <MODEL, e.g. OLED65C1PUB>. Software version: <e.g. 03.53.45>.
-webOS SDK version: <e.g. 6.5.3>. TV IP: <IP>. I want LG's ads and telemetry removed and LG's Home
+I have a rooted LG OLED C1. Model: OLED55C1AUB. Software version: 03.53.45.
+webOS version: 6.5.3-47 (SDK 6.5.3). TV IP: <IP>. My computer runs Windows; you are in Git Bash. I want LG's ads and telemetry removed and LG's Home
 replaced with the CleanYourTV launcher. Work on the real TV, step by step, and verify each step.
 Ask me before anything that depends on my preferences.
 
